@@ -1,0 +1,6 @@
+/Users/kimashmore/Projects/simple_site/simple_site/bin/Debug/simple_site.exe
+/Users/kimashmore/Projects/simple_site/simple_site/bin/Debug/simple_site.pdb
+/Users/kimashmore/Projects/simple_site/simple_site/obj/Debug/simple_site.csproj.AssemblyReference.cache
+/Users/kimashmore/Projects/simple_site/simple_site/obj/Debug/simple_site.csproj.CoreCompileInputs.cache
+/Users/kimashmore/Projects/simple_site/simple_site/obj/Debug/simple_site.exe
+/Users/kimashmore/Projects/simple_site/simple_site/obj/Debug/simple_site.pdb
