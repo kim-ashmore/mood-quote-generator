@@ -39,6 +39,13 @@ namespace mood_emulator
                 case 2:
                     Console.WriteLine("Oh, I'm Sorry to hear that. I know just the thing to cheer you up.");
                     break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+
                 default:
                     Console.WriteLine("Perfect! Jennny the Genie has some motivational words for you...");
 
