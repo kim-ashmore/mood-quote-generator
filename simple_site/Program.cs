@@ -6,35 +6,46 @@ namespace mood_emulator
 
     class MainClass
     {
-        static public string mood_evaluator(string mood)
-        {
+        static public string mood_evaluator(string mood){
+
             mood = mood.ToLower();
             int mood_val = 0;
-            Dictionary<string, int> Mood_dict = new Dictionary<string, int>
-            {
+            string quote;
+
+            Dictionary<string, int> Mood_dict = new Dictionary<string, int>{
                 {"happy", 1 },
                 {"sad", 2},
                 {"mad", 3 },
                 {"excited", 4},
-                {"nervous", 5},
-            };
+                {"nervous", 5}};
 
-            // TODO: EMULATE MORE MOODS AND TAKE IN FROM COMMAND LINE IF NOT EXISTING IN SWITCH
-            if (Mood_dict.ContainsKey(mood) == true)
-            {
+            if (Mood_dict.ContainsKey(mood.ToLower()) == true){
                 mood_val = Mood_dict[mood];
+                //Console.WriteLine($"mood value: {mood_val}");
             }
 
-            else
-            {
+            else{
                 Console.WriteLine("I've never heard of that before. could you tell me more about it?");
-                Mood_dict.Add(Console.ReadLine(), 0);
+                Mood_dict.Add(mood,0);
+                string description = Console.ReadLine(); // ADD TO FUTURE DATABASE WHERE MOODS CAN BE EVALUATED BASED ON WORD DETECTION
             }
 
-            switch (mood_val)
-            {
+           
+            return quote = Mood_quotes(mood, mood_val);
+
+        }
+
+        static public string Mood_quotes(string mood, int moodValue){
+
+            string quote = "";
+            string author = "";
+
+
+            switch (moodValue){
                 case 1:
-                    Console.WriteLine("Fantastic! I have something for you.");
+                    Console.WriteLine("Fantastic! I have something for you...");
+                    quote = "You are smart and confident within yourself. You've got this.";
+                    author = "Kimbo Slice";
                     break;
                 case 2:
                     Console.WriteLine("Oh, I'm Sorry to hear that. I know just the thing to cheer you up.");
@@ -47,36 +58,25 @@ namespace mood_emulator
                     break;
 
                 default:
-                    Console.WriteLine("Perfect! Jennny the Genie has some motivational words for you...");
+                    Console.WriteLine("Jennny the Genie is out of words for you today. come back tomorrow!");
+                    quote = "";
+                    author = "";
 
                     break;
             }
-            return mood;
-
+            string final_quote = $"\n\t{quote} \n\t\t\t - {author}";
+            return final_quote;
         }
 
-        static public string Mood_quotes(string mood)
-        {
-            string quote = "";
-            string Author;
+        public static void Main(string[] args){
 
-            return quote;
-        }
+            Console.WriteLine("Hello! I'm Jennny the Genie. How are you feeling today?\n ");
 
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello!I'm Jennny the Genie. How are you feeling today? ");
-
-            string mood = Console.ReadLine();
-
-            // WORD CHECKING AND EVALUATION OF MOOD
+            string mood = Console.ReadLine(); // WORD CHECKING AND EVALUATION OF MOOD
 
             string mood_quote = mood_evaluator(mood);
             // TODO: ADD SYNONYMOUS BEHAVIOR. call an api with valuable quotes
-
-            // EXIT WITH QUOTE
-
-            Console.WriteLine($"Here is some great words by AUTHOR: {mood_quote}");
+            Console.WriteLine($"\n {mood_quote}");
 
         }
 
