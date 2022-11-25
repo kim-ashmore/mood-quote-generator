@@ -18,7 +18,8 @@ namespace mood_emulator
                 {"sad", 2},
                 {"mad", 3 },
                 {"excited", 4},
-                {"nervous", 5}};
+                {"nervous", 5}
+            };
 
             if (Mood_dict.ContainsKey(mood.ToLower()) == true)
             {
@@ -59,15 +60,16 @@ namespace mood_emulator
                     Console.WriteLine("Uh oh. Who got on your nerves today? Regardless, I have something for you..");
                     break;
                 case 4:
+                    Console.WriteLine("Ooof something worth while is on the horizon. Lets see what I got for you.");
                     break;
                 case 5:
+                    Console.WriteLine("No need to feel this way. Here's something that may soother your soul.");
                     break;
 
                 default:
                     Console.WriteLine("Jennny the Genie is out of words for you today. come back tomorrow!");
                     quote = "";
                     author = "";
-
                     break;
             }
 
