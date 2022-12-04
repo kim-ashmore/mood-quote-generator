@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{D2D41EFB-26A8-48F5-855E-4B0B2A3BE581}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="7" Column="12" />
+      <File FileName="Program.cs" Line="47" Column="1" />
       <File FileName="main.cs" Line="17" Column="40" />
     </Files>
     <Pads>
@@ -10,7 +10,7 @@
           <Node name="mood_emulator" expanded="True">
             <Node name="Solution Items" expanded="True" />
             <Node name="mood_emulator" expanded="True">
-              <Node name="main.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
