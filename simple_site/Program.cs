@@ -24,7 +24,7 @@ namespace mood_emulator
             if (Mood_dict.ContainsKey(mood.ToLower()) == true)
             {
                 mood_val = Mood_dict[mood];
-                //Console.WriteLine($"mood value: {mood_val}");
+                Console.WriteLine($"mood value: {mood_val}");
             }
 
             else
